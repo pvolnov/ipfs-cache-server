@@ -1,0 +1,14 @@
+version: '3.7'
+volumes:
+  pg-data:
+
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - /var/www/here-storage/cache:/workdir/cache
+    command: "python3 src/run_web.py"
+    restart: always
+    ports:
+      - "7001:7001"
