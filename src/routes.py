@@ -26,5 +26,5 @@ async def redirect_to_cache(
                 else:
                     logger.info(f"Failed to download image from {path}")
                     return RedirectResponse(url=f"https://{path}")
-
+    logger.info("redirect to https://storage.herewallet.app/cache/{name}")
     return RedirectResponse(url=f"https://storage.herewallet.app/cache/{name}")
