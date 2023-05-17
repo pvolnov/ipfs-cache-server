@@ -96,4 +96,4 @@ async def redirect_to_cache(r: Request, path: str):
 
     r.app.extra["storage"][name] = datetime.datetime.utcnow().timestamp()
     clean_storage(r.app.extra["storage"], max_size=CONFIG["max_size"])
-    return RedirectResponse(url=f"https://storage.herewallet.app/cache/{name}")
+    return RedirectResponse(url=f"{CONFIG['image_server_prefix']}{name}")

@@ -2,3 +2,4 @@
 folder_size: 10240
 cache_folder: ./cache
 max_size: 10000
+image_server_prefix: https://storage.herewallet.app/cache/

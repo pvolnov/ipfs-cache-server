@@ -13,6 +13,7 @@ Setup configuration config.yml:
 Open the config.yml file and update the following configuration parameters:
 - `folder_size:` The maximum cache size in MB.
 - `cache_folder:` The path to the cache folder (default is ./cache).
+- `image_server_prefix:` web link to ngnix server to share images from cache folder
 - `max_size:` The maximum number of images in the cache folder.
 Set cache folder path in `docker-compose.yml:`
 
