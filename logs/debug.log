@@ -37,3 +37,21 @@
 2023-05-16 19:36:29.286 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
 2023-05-16 19:36:33.880 | INFO     | routes:redirect_to_cache:44 - Failed to download image from storage.herewallet.app/nfts/tonic_goblin.enleap.near4.jpg
 2023-05-16 19:36:58.882 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:39:28.347 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:39:35.373 | ERROR    | routes:redirect_to_cache:60 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:39:35.374 | INFO     | routes:clean_storage:27 - folder_size: 39093
+2023-05-16 19:39:37.593 | INFO     | routes:redirect_to_cache:53 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near999.jpg downloaded and saved to the cache folder.
+2023-05-16 19:39:37.594 | INFO     | routes:clean_storage:27 - folder_size: 74114
+2023-05-16 19:40:00.298 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:40:01.209 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:40:05.949 | ERROR    | routes:redirect_to_cache:60 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:40:05.950 | INFO     | routes:clean_storage:27 - folder_size: 0.07077980041503906
+2023-05-16 19:40:18.819 | INFO     | routes:redirect_to_cache:53 - Image storage.herewallet.app/nfts/nft.herewallet.near317.jpg downloaded and saved to the cache folder.
+2023-05-16 19:40:18.821 | INFO     | routes:clean_storage:27 - folder_size: 0.5617866516113281
+2023-05-16 19:40:37.731 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:45:33.689 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:46:13.114 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:46:14.090 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:46:19.545 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:54:13.181 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:59:49.722 | INFO     | __main__:on_shutdown:59 - overview.json saved

@@ -1,0 +1,4 @@
+
+folder_size: 10240
+cache_folder: ./cache
+max_size: 10000
