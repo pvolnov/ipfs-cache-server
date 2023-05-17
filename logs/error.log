@@ -1,0 +1,13 @@
+2023-05-16 19:29:59.499 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:30:18.092 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:11.030 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:37.782 | ERROR    | routes:redirect_to_cache:45 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:49.889 | ERROR    | routes:redirect_to_cache:45 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:33:34.678 | ERROR    | routes:redirect_to_cache:46 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:02.622 | ERROR    | routes:redirect_to_cache:46 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:37.946 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:48.622 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:35:52.141 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:02.423 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:23.361 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:29.286 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico

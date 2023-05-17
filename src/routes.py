@@ -1,15 +1,31 @@
+import datetime
 import os
 
 import aiohttp
 from fastapi import APIRouter
 from loguru import logger
+from starlette.requests import Request
 from starlette.responses import RedirectResponse
 
 router = APIRouter()
 
 
+def clean_storage(storage, maxsize=10000):
+    items = list(storage.items())
+    for name, _ in sorted(items, key=lambda x: x[1]):
+        if len(storage) < maxsize:
+            return
+
+        cache_path = os.path.join("./cache", name)
+        if os.path.exists(cache_path):
+            logger.info(f"Removing {name}")
+            os.remove(cache_path, )
+        storage.pop(name, None)
+
+
 @router.get("/{path:path}")
 async def redirect_to_cache(
+    r: Request,
     path: str,
 ):
     name = path.replace("/", "-")
@@ -29,5 +45,7 @@ async def redirect_to_cache(
                         return RedirectResponse(url=f"https://{path}")
             except Exception as e:
                 logger.error(f"{e} {path}")
-    logger.info("redirect to https://storage.herewallet.app/cache/{name}")
+
+    r.app.extra["storage"][name] = datetime.datetime.utcnow().timestamp()
+    clean_storage(r.app.extra["storage"], maxsize=10000)
     return RedirectResponse(url=f"https://storage.herewallet.app/cache/{name}")

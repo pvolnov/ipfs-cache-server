@@ -1,0 +1,39 @@
+2023-05-16 19:29:59.499 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:30:18.071 | INFO     | routes:redirect_to_cache:37 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near999.jpg downloaded and saved to the cache folder.
+2023-05-16 19:30:18.092 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:07.274 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:31:11.030 | ERROR    | routes:redirect_to_cache:44 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:35.362 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:31:36.239 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:31:37.782 | ERROR    | routes:redirect_to_cache:45 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:31:49.856 | INFO     | routes:redirect_to_cache:38 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near919.jpg downloaded and saved to the cache folder.
+2023-05-16 19:31:49.889 | ERROR    | routes:redirect_to_cache:45 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:33:01.651 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:33:08.072 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:33:10.765 | INFO     | routes:redirect_to_cache:39 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near919.jpg downloaded and saved to the cache folder.
+2023-05-16 19:33:34.678 | ERROR    | routes:redirect_to_cache:46 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:33:38.988 | INFO     | routes:redirect_to_cache:39 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near929.jpg downloaded and saved to the cache folder.
+2023-05-16 19:34:02.622 | ERROR    | routes:redirect_to_cache:46 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:06.395 | INFO     | routes:redirect_to_cache:39 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near199.jpg downloaded and saved to the cache folder.
+2023-05-16 19:34:32.481 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:34:33.635 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:34:37.946 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:37.947 | INFO     | routes:clean_storage:21 - Removing storage.herewallet.app-nfts-tonic_goblin.enleap.near199.jpg
+2023-05-16 19:34:41.145 | INFO     | routes:redirect_to_cache:40 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near939.jpg downloaded and saved to the cache folder.
+2023-05-16 19:34:48.622 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:34:48.623 | INFO     | routes:clean_storage:21 - Removing storage.herewallet.app-nfts-tonic_goblin.enleap.near939.jpg
+2023-05-16 19:34:52.518 | INFO     | routes:redirect_to_cache:40 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near129.jpg downloaded and saved to the cache folder.
+2023-05-16 19:35:19.565 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:35:40.015 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:35:52.141 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:35:56.610 | INFO     | routes:redirect_to_cache:40 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near1.jpg downloaded and saved to the cache folder.
+2023-05-16 19:36:02.423 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:02.424 | INFO     | routes:clean_storage:21 - Removing storage.herewallet.app-nfts-tonic_goblin.enleap.near1.jpg
+2023-05-16 19:36:07.798 | INFO     | routes:redirect_to_cache:40 - Image storage.herewallet.app/nfts/tonic_goblin.enleap.near2.jpg downloaded and saved to the cache folder.
+2023-05-16 19:36:20.560 | INFO     | __main__:on_shutdown:59 - overview.json saved
+2023-05-16 19:36:21.473 | INFO     | __main__:on_startup:47 - Backend init
+2023-05-16 19:36:23.361 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:28.049 | INFO     | routes:redirect_to_cache:44 - Failed to download image from storage.herewallet.app/nfts/tonic_goblin.enleap.near3.jpg
+2023-05-16 19:36:29.286 | ERROR    | routes:redirect_to_cache:47 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2023-05-16 19:36:33.880 | INFO     | routes:redirect_to_cache:44 - Failed to download image from storage.herewallet.app/nfts/tonic_goblin.enleap.near4.jpg
+2023-05-16 19:36:58.882 | INFO     | __main__:on_shutdown:59 - overview.json saved

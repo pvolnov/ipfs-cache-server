@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 """Main app file."""
+import json
 import os
 
 import uvicorn
@@ -40,13 +41,22 @@ logger.add(
 
 if __name__ == "__main__":
 
+    app = FastAPI(title="Cache server")
+
     async def on_startup(*args):
         logger.info("Backend init")
+        storage = {}
+        try:
+            with open("./cache/.overview.json", "r") as f:
+                storage = json.load(f)
+        except:
+            pass
+        app.extra["storage"] = storage
 
     async def on_shutdown(*args):
-        pass
-
-    app = FastAPI(title="Cache server")
+        with open("./cache/.overview.json", "w") as f:
+            json.dump(app.extra.get("storage"), f)
+        logger.info("overview.json saved")
 
     app.include_router(router, prefix=f"", tags=["web"])
     app.add_middleware(
@@ -56,6 +66,9 @@ if __name__ == "__main__":
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    app.add_event_handler("startup", on_startup)
+    app.add_event_handler("shutdown", on_shutdown)
 
     uvicorn.run(
         app,
