@@ -35,9 +35,18 @@ Set up Nginx to publish images from the cache folder.
 
 The service will be accessible at http://0.0.0.0:7001.
 
-You can make requests to the server by replacing the image link with `https://<link to your server>/<url>.` 
 
-For example: http://0.0.0.0:7001/nftstorage.link/ipfs/bafybeieboqph4qqf2n7lasq4ehn6snke2nhdqzde4i4hlywwd3dd7mcjma/U1307.png.
+##  How to use
+
+1. Make all requests via cache server, create url `https://<image server>/url?sz=XXX`
+
+**Example**
+- `server-url:` https://image.herewallet.app
+- `ipfs url:` https://nftstorage.link/ipfs/bafybeieboqph4qqf2n7lasq4ehn6snke2nhdqzde4i4hlywwd3dd7mcjma/U1307.png
+- `ipfs id:` nftstorage.link/ipfs/bafybeieboqph4qqf2n7lasq4ehn6snke2nhdqzde4i4hlywwd3dd7mcjma/U1307.png
+- `size:` 512*512
+
+Result: https://image.herewallet.app/nftstorage.link/ipfs/bafybeieboqph4qqf2n7lasq4ehn6snke2nhdqzde4i4hlywwd3dd7mcjma/U1307.png?sz=512
 
 ## Contributing
 
