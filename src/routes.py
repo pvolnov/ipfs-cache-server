@@ -73,7 +73,7 @@ async def redirect_to_cache(r: Request, path: str):
         RedirectResponse: The redirect response.
     """
 
-    path = quote(path)
+    url_path = quote(path)
     folder_size = r.app.extra["storage"].get("folder_size", 0)
     if folder_size > CONFIG["folder_size"]:
         logger.error("Not enough memory to cache images")
@@ -85,16 +85,17 @@ async def redirect_to_cache(r: Request, path: str):
     if not os.path.exists(cache_path):
         async with aiohttp.ClientSession() as session:
             try:
-                async with session.get(f"https://{path}") as response:
+                async with session.get(f"https://{url_path}") as response:
                     if response.status == 200:
                         with open(cache_path, "wb") as f:
                             f.write(await response.read())
                         logger.info(f"Image {path} downloaded and saved to the cache folder.")
                     else:
                         logger.info(f"Failed to download image from {path}")
-                        return RedirectResponse(url=f"https://{path}")
+                        return RedirectResponse(url=f"https://{url_path}")
             except Exception as e:
-                logger.error(f"{e} {path}")
+                logger.error(f"{e} {url_path}")
+                return RedirectResponse(url=f"https://{url_path}")
 
     r.app.extra["storage"][name] = datetime.datetime.utcnow().timestamp()
     clean_storage(r.app.extra["storage"], max_size=CONFIG["max_size"])
