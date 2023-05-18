@@ -65,7 +65,6 @@ def clean_storage(storage, max_size=10000):
 async def redirect_to_cache(r: Request, path: str):
     """
     Endpoint to redirect requests to cached images.
-
     Args:
         r (Request): The incoming request.
         path (str): The path to the image.
