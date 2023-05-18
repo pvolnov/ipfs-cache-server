@@ -80,6 +80,7 @@ async def redirect_to_cache(r: Request, path: str):
         return RedirectResponse(url=f"https://{path}")
 
     name = path.replace("/", "-")
+    url_name = url_path.replace("/", "-")
     cache_path = os.path.join(CONFIG["cache_folder"], name)
 
     if not os.path.exists(cache_path):
@@ -99,4 +100,4 @@ async def redirect_to_cache(r: Request, path: str):
 
     r.app.extra["storage"][name] = datetime.datetime.utcnow().timestamp()
     clean_storage(r.app.extra["storage"], max_size=CONFIG["max_size"])
-    return RedirectResponse(url=f"{CONFIG['image_server_prefix']}{name}")
+    return RedirectResponse(url=f"{CONFIG['image_server_prefix']}{url_name}")
