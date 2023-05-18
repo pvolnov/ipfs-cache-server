@@ -2,7 +2,7 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 WORKDIR /workdir
 COPY . .
 
-RUN apt install -y pngquant
+RUN apt-get update && apt-get install -y pngquant
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
