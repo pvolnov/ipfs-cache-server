@@ -18,3 +18,4 @@ cryptography==38.0.4
 base58==2.1.1
 py-near==1.0.6
 pillow==9.5.0
+pngquant==1.0.7
