@@ -107,7 +107,7 @@ async def redirect_to_cache(r: Request, path: str, sz: Optional[int] = None):
                         with open(cache_path, "wb") as f:
                             image = await response.read()
                             f.write(image)
-                            pngquant.quant_image(cache_path, cache_path, 90)
+                            pngquant.quant_image(cache_path, cache_path, 50)
 
                         logger.info(
                             f"Image {path} downloaded and saved to the cache folder."
