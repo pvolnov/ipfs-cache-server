@@ -1,5 +1,6 @@
 import datetime
 import os
+from urllib.parse import quote
 
 import aiohttp
 import yaml
@@ -68,10 +69,11 @@ async def redirect_to_cache(r: Request, path: str):
     Args:
         r (Request): The incoming request.
         path (str): The path to the image.
-
     Returns:
         RedirectResponse: The redirect response.
     """
+
+    path = quote(path)
     folder_size = r.app.extra["storage"].get("folder_size", 0)
     if folder_size > CONFIG["folder_size"]:
         logger.error("Not enough memory to cache images")
