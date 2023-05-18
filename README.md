@@ -6,6 +6,7 @@ Before deploying the service, ensure that you have the following prerequisites i
 
 - Docker
 - Docker Compose
+- `sudo apt install -y pngquant`
 
 ## Getting Started
 Setup configuration config.yml:
