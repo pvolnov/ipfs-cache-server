@@ -1,6 +1,8 @@
 # Cache server IPFS images
 This server provides caching functionality for IPFS images using FastAPI and Docker.
 
+**Tutorial:** https://dev.to/pvolnov/setup-ipfs-images-cache-server-in-5-min-4n8f
+
 ## Prerequisites
 Before deploying the service, ensure that you have the following prerequisites installed:
 
@@ -20,7 +22,7 @@ Set cache folder path in `docker-compose.yml:`
 
 Open the docker-compose.yml file and update the volume mapping to your desired cache folder path:
 yaml
-Copy code
+
 ```
 volumes:
   - /var/www/here-storage/cache:/workdir/cache
