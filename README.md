@@ -1,4 +1,4 @@
-# Cache server IPFS images
+# Cache server for IPFS images
 This server provides caching functionality for IPFS images using FastAPI and Docker.
 
 **Tutorial:** https://dev.to/pvolnov/setup-ipfs-images-cache-server-in-5-min-4n8f
@@ -10,7 +10,7 @@ Before deploying the service, ensure that you have the following prerequisites i
 - Docker Compose
 - `sudo apt install -y pngquant`
 
-## Getting Started
+## Getting started
 Setup configuration config.yml:
 
 Open the config.yml file and update the following configuration parameters:
