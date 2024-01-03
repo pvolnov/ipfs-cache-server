@@ -8,6 +8,7 @@ services:
       context: .
     volumes:
       - /var/www/here-storage/cache:/workdir/cache
+      - /var/www/here-storage/upload:/workdir/upload
     command: "python3 src/run_web.py"
     restart: always
     ports:

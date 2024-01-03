@@ -1,15 +1,19 @@
 import datetime
 import os
+import shutil
+import uuid
 from io import BytesIO
 from typing import Optional
 from urllib.parse import quote
 
+import aiofiles as aiofiles
 import aiohttp
 import yaml
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from loguru import logger
+from fastapi import UploadFile, File
 from starlette.requests import Request
-from starlette.responses import RedirectResponse
+from starlette.responses import RedirectResponse, JSONResponse, HTMLResponse
 from PIL import Image
 import pngquant
 
@@ -18,6 +22,32 @@ router = APIRouter()
 
 with open("config.yml", "r") as config_file:
     CONFIG = yaml.safe_load(config_file)
+
+with open("upload_form.html", "r") as f:
+    UPLOAD_PAGE = f.read()
+
+
+@router.post("/upload-h9efy921h92")
+async def upload_file(photo: UploadFile = File(...)):
+    file_extension = os.path.splitext(photo.filename)[1]
+    random_filename = f"{uuid.uuid4()}{file_extension}"
+    file_location = CONFIG["upload"] + f"/{random_filename}"
+
+    # Ensure the upload directory exists
+    os.makedirs(os.path.dirname(file_location), exist_ok=True)
+
+    async with aiofiles.open(file_location, "wb") as out_file:
+        while content := await photo.read(1024):  # Read chunks of 1024 bytes
+            await out_file.write(content)
+
+    await photo.close()
+    return JSONResponse(
+        status_code=200,
+        content={
+            "message": f"Photo uploaded successfully to: {CONFIG['upload_server_prefix']}{random_filename}",
+            "url": f"{CONFIG['upload_server_prefix']}{random_filename}",
+        },
+    )
 
 
 def get_folder_size(folder_path):
@@ -88,6 +118,8 @@ async def redirect_to_cache(r: Request, path: str, sz: Optional[int] = None):
     Returns:
         RedirectResponse: The redirect response.
     """
+    if "upload-h9efy921h92" in path:
+        return HTMLResponse(UPLOAD_PAGE)
 
     url_path = quote(path)
     folder_size = r.app.extra["storage"].get("folder_size", 0)

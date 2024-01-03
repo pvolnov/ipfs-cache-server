@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Upload</title>
+    <script>
+        function uploadFile() {
+            var form = document.getElementById('uploadForm');
+            var imageUrl = document.getElementById('imageUrl');
+            var formData = new FormData(form);
+
+            fetch('/upload-h9efy921h92', { // Specify your server script URL here
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network error occurred during data submission!');
+            })
+            .then(data => {
+                imageUrl.textContent = data.url;
+                imageUrl.href = data.url;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error uploading file: ' + error.message);
+            });
+        }
+    </script>
+</head>
+<body>
+
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" name="photo" accept="image/*">
+    <input type="button" value="Upload" onclick="uploadFile()"><br>
+</form>
+<a id="imageUrl"></a>
+</body>
+</html>
