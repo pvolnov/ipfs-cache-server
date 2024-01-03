@@ -3284,3 +3284,4 @@ Traceback (most recent call last):
 
 aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known]
 2024-01-02 21:38:48.301 | ERROR    | routes:redirect_to_cache:152 - Cannot connect to host favicon.ico:443 ssl:default [nodename nor servname provided, or not known] favicon.ico
+2024-01-02 21:57:42.541 | INFO     | __main__:on_shutdown:59 - overview.json saved
